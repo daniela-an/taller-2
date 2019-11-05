@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/detalle.css">
 </head>
+
 <body>
     {{> nav}}
 
@@ -33,13 +35,38 @@
             <h3>{{precio}} COP</h3>
             <p>{{descripción}}</p>
             <div class="input">
-                <input type="number" placeholder="0">
-                <button>Agregar al carrito</button>
+                <input type="number" placeholder="0" min="1" class="cantidad">
+                <button class="btnAgregar" data-name="{{nombre}}">Agregar al carrito</button>
             </div>
         </article>
     </section>
     {{/each}}
 
-    {{> foot}}    
+    {{> foot}}
 </body>
+<script>
+    document.querySelector(".btnAgregar").addEventListener('click', function () {
+        var name = document.querySelector(".btnAgregar").getAttribute('data-name');
+        var cant = 1 ;
+        if(document.querySelector(".cantidad").value !== '') cant= document.querySelector(".cantidad").value;
+
+        fetch(`/api/AgregarAlCarrito`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: `nombre=${name}&cantidad=${cant}`,
+        }).then(function (respuesta) {
+            return respuesta.text();
+        }).catch(function (error) {
+            console.error(error);
+        }).then(function (mensaje) {
+            console.log(mensaje);
+        });
+
+        window.location.href = "/checkout";
+    }
+    );
+</script>
+
 </html>
