@@ -135,7 +135,7 @@
         "descripción": "información del producto",
         "nombre":"Aretes Sueños",
         "precio": 67000,
-        "color": "Negros",
+        "color": "Negro",
         "imagenes": [
                         "aretesSueños_Grande",
                         "aretesSueños_01",
@@ -149,7 +149,7 @@
         "descripción": "información del producto",
         "nombre":"Aretes Sol Naciente",
         "precio": 58000,
-        "color": "Negros",
+        "color": "Negro",
         "imagenes": [
                         "aretesSolNaciente_Grande",
                         "aretesSolNaciente_01",
