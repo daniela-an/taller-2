@@ -28,7 +28,41 @@
     flex-direction: row;
     align-items: space-between;
   }
+
+  .listText .barItems:hover > ul {
+    display: block;
+  }
   
+  .barItems ul {
+    list-style: none;
+    position: absolute;
+    border: gray 2px solid;
+    width: 150px;
+    background-color: white;
+    display: none;
+  }
+
+  .barItems * {
+    margin: 0;
+    padding: 0;
+  }
+
+  .barItems ul li a {
+    text-decoration: none;
+    color: gray;
+    width: 80%;
+    margin-left: 20px;;
+  }
+
+  .barItems ul li {
+    height: 40px;
+    display: flex;
+    align-items: center;
+  }
+
+  .barItems ul li:hover {
+      background-color: rgba(0,0,0, 0.2);
+  }
   
   .navImg{
     width: 25%;
