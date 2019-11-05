@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Emilia</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/informacion.css">
+
+    <style>
+        .box {
+  width: 40%;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.2);
+  padding: 35px;
+  border: 2px solid #fff;
+  border-radius: 20px/50px;
+  background-clip: padding-box;
+  text-align: center;
+}
+
+.button {
+  font-size: 1em;
+  padding: 10px;
+  color: #fff;
+  border: 2px solid #06D85F;
+  border-radius: 20px/50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.button:hover {
+  background: #06D85F;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+}
+    </style>
+</head>
+
+<body>
+    {{> nav}}
+
+    <section class="tuinfo">TU INFORMACIÓN</section>
+
+    <div class="form">
+        <p>Información de contacto</p>
+        <div class="juntos">
+            <input type="text" name="nombre" id="nombre" value="" placeholder="Nombre">
+            <input type="text" name="apellido" id="apellido" value="" placeholder="Apellido">
+        </div>
+
+        <input type="number" name="cedula" id="cedula" value="" placeholder="Documento de identidad">
+        <input type="text" name="direccion" id="direccion" value="" placeholder="Dirección">
+        <input type="text" name="casa" id="casa" value="" placeholder="Casa, apartamento (Opcional)">
+
+        <p>Información de la tarjeta</p>
+        <input type="number" name="cuenta" id="cuenta" value="" placeholder="Número de la tarjeta">
+
+        <div class="juntos">
+            <div class="cont">
+                <p>Fecha de vendimiento</p>
+                <input type="date" name="fecha" id="fecha" value="">
+            </div>
+            <div class="cont">
+                <p>Còdigo de seguridad</p>
+                <input type="number" name="codigo" id="codigo" value="" placeholder="CVV">
+            </div>
+
+        </div>
+    </div>
+
+        <div class="pagar">REALIZAR PAGO</div>
+    
+
+    <div id="popup1" class="overlay">
+        <div class="popup">
+            <h2>Gracias por comprar</h2>
+            <a class="close" href="#">&times;</a>
+            <div class="content">
+                Tu compra ha sido realizada satisfactoriamente.
+            </div>
+        </div>
+    </div>
+
+    {{> foot}}
+</body>
+<script>
+    document.querySelector('.pagar').addEventListener('click', function () {
+        var nombre = document.getElementById('nombre').value;
+        var apellido = document.getElementById('apellido').value;
+        var cedula = document.getElementById('cedula').value;
+        var direccion = document.getElementById('direccion').value;
+        var casa = document.getElementById('casa').value;
+        var cuenta = document.getElementById('cuenta').value;
+        var fecha = document.getElementById('fecha').value;
+        var codigo = document.getElementById('codigo').value;
+
+        if (nombre == '' || apellido == '' || cedula == '' || direccion == '' || cuenta == '' || fecha == '' || codigo == '') {
+            alert("Por favor llene todos los campos");
+            return;
+        } else {
+            fetch(`/api/NuevaSolicitud`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: `nombre=${nombre}&apellido=${apellido}&cedula=${cedula}&direccion=${direccion}&cuenta=${cuenta}&fecha=${fecha}&codigo=${codigo}`,
+            }).then(function (respuesta) {
+                return respuesta.text();
+            }).catch(function (error) {
+                console.error(error);
+            }).then(function (mensaje) {
+                console.log(mensaje);
+            });
+            
+            window.location.href = "#popup1";
+
+            setTimeout(()=> {
+                window.location.href = "/store?var=general&val=general";
+            }, 3000);
+        }
+    });
+</script>
+
+</html>
