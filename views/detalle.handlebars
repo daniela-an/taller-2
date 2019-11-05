@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Emilia</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/detalle.css">
+</head>
+<body>
+    {{> nav}}
+
+    <section class="migadepan"><a href="">Inicio</a> > <a href="">ARETES</a> > {{nombre}}</section>
+
+    {{#each producto}}
+    <section class="producto">
+        <article class="imagenes">
+            <div class="imgsVerticales">
+                <div class="imgCont">
+                    <img src="./image/galeriaAretes/{{imagenes.[0]}}.jpg" alt="{{nombre}}" style="width: 100%;">
+                </div>
+                <div class="imgCont">
+                    <img src="./image/galeriaAretes/{{imagenes.[2]}}.jpg" alt="{{nombre}}" style="width: 100%;">
+                </div>
+            </div>
+            <div class="imgCont">
+                <img src="./image/galeriaAretes/{{imagenes.[1]}}.jpg" alt="{{nombre}}" style="width: 100%;">
+            </div>
+        </article>
+        <article class="descripcion">
+            <h2>{{nombre}}</h2>
+            <h3>{{precio}} COP</h3>
+            <p>{{descripción}}</p>
+            <div class="input">
+                <input type="number" placeholder="0">
+                <button>Agregar al carrito</button>
+            </div>
+        </article>
+    </section>
+    {{/each}}
+
+    {{> foot}}    
+</body>
+</html>

@@ -48,7 +48,7 @@
                 <li><a href="">Destacados</a></li>
                 <li><a href="">Todos</a></li>
                 <li><a href="">Alfabeticamente A-z</a></li>
-                <li><a href="">Precio de menor a mayor</a></li>
+                <li><a href="/store?var=ordenar&val=precio">Precio de menor a mayor</a></li>
                 <li><a href="">Fecha, del nuevo al viejo</a></li>
             </ul>
         </article>
@@ -60,7 +60,7 @@
             <div data-name={{nombre}} class="imgCont">
                 <img src="./image/galeriaAretes/{{imagenes.[0]}}.jpg" alt="{{nombre}}" style="width: 100%;">
             </div>
-            <p>Añadir al Carrito</p>
+            <p><a href='/detalle?producto={{nombre}}'>Añadir al Carrito</a></p>
             <h2>{{nombre}}</h2>
             <h2>{{color}}</h2>
             <h2>$ {{precio}}</h2>

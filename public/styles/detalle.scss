@@ -1,0 +1,80 @@
+.migadepan {
+    width: 97%;
+    height: 80px;
+    background-color: #CDB6AB;
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.producto {
+    width: 100%;
+    padding: 70px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    ;
+
+    .imagenes {
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        .imgsVerticales {
+            width: 30%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+
+            .imgCont {
+                width: 100%;
+                height: 50%;
+                overflow: hidden;
+                display: flex;
+                align-items: flex-start;
+            }
+        }
+
+        .imgCont {
+            width: 60%;
+            height: 100%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .descripcion {
+        width: 40%;
+        color: gray;
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            margin-bottom: 50px;
+        }
+
+        .input {
+            margin-top: 280px;
+            input {
+                width: 10%;
+                height: 34px;
+            }
+
+            button {
+                border: none;
+                padding: 0 10%;
+                color: white;
+                height: 40px;
+                background-color: #CDB6AB;
+            }
+        }
+    }
+}

@@ -40,8 +40,8 @@ app.get('/', function (request, response) {
 
 app.get('/store', function(request,response){
     const coleccion = db.collection('productos');
-    var obj = {};
-    if(request.query.var !== 'general')obj[request.query.var] = { '$eq' : request.query.val };
+    var obj = {}, va = request.query.var;
+    if(va !== 'general' && va !== 'ordenar')obj[va] = { '$eq' : request.query.val };
     
     coleccion.find(obj).toArray(function(err,docs){
         if(err){
@@ -49,10 +49,26 @@ app.get('/store', function(request,response){
             response.send(err);
             return;
         }
+        if(va === 'ordenar') docs.sort((a, b) => {return (a.precio - b.precio)});
         var contexto = {
             productos: docs 
         };
         response.render('aretes', contexto);
+    });
+});
+
+app.get('/detalle', function(request, response){
+    const coleccion = db.collection('productos');
+    var prod = request.query.producto;
+
+    coleccion.find( { nombre: { '$eq' : prod} } ).toArray(function(err,docs){
+        if(err){
+            console.log(err);
+            response.send(err);
+            return;
+        }
+        console.log(docs[0]);
+        response.render('detalle', { producto: docs, nombre: docs[0].nombre});
     });
 });
 
