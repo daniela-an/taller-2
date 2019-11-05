@@ -1,0 +1,405 @@
+* {
+    margin: 0%;
+    font-family: 'Montserrat', sans-serif; 
+  }
+  
+  .navBar {
+  display: flex;
+  width: 100%;
+  height: 30%;
+  }
+  
+  .logo{
+    height: 100%;
+    width: 50%;
+    margin-top: 1%;
+  }
+  
+  .navText{
+    width: 35%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .listText{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: space-between;
+  }
+  
+  
+  .navImg{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    margin-top: 1.5%;
+    margin-left: 5%;
+  }
+  
+  .listImg{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    width: 70%; 
+  }
+  
+  
+  .staticBar {
+    position: static;
+    top: 0;
+    max-width: 100%;
+    height: 30px;
+    background-color: #CDB6AB;
+  }
+  
+  
+  /* Iconos del menú (tamaño)*/
+  .styleImgMenu {
+  height: 200%;
+  width: 80%;   /* Iconos del menú (tamaño)*/
+  }
+  
+  
+  /* Iconos */
+  .navBarItems {
+    text-decoration: none;
+    color: black;
+    font-weight: 100;
+  }
+  
+  
+  .styleImgLogo {
+    width: 30%;
+    margin-top: 5%;
+    margin-left: 20%;
+  }
+  
+  
+  .navigation {
+    list-style: none;
+    width: 100%;
+  }
+  
+  
+  .navBarItems:hover {
+    font-weight: 600;
+  }
+  
+  
+  .barItems {
+    padding: 3em;
+    display: inline;
+    position: static;
+    justify-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; 
+  }
+  
+  
+  .barImg{
+    
+    padding: 1em;
+    height: 200%;
+    width: 43%;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    justify-content: center;
+  }
+  
+  
+  .imgBanner {
+    max-width: 53%;
+  }
+  
+  
+  .banner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-top: 24px;
+    max-width: 100%;
+    background-color: #CDB6AB;
+  }
+  
+  
+  .bannerInfo {
+    position: absolute;
+    bottom: 100px;
+    right: 100px;
+  }
+  
+  
+  /* Letrero Amuletos  */
+  .bannerInfoAmuletos {
+    font-family: 'Dancing Script', cursive;
+    font-size: 80px;
+    color: #7B3631;
+  }
+  
+  
+  /*Letrero Nueva colección*/
+  .bannerInfoColecion {
+    font-style: italic;
+    font-weight: 370;
+    font-size: 25px;
+    color: rgb(145, 93, 45);
+    margin-top: 10px;
+  }
+  
+  /* Raya de Amuletos*/
+  .decoracion {
+    border-color: white;
+    border: solid 3px white;
+  }
+  
+  
+  /*características principales con descripción*/
+  .barraDetalles {
+  
+    font-size: 90%;
+    margin-top: 2%; 
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+  
+  /****CATEGORIAS****/
+  
+  
+  .tamImagen {
+    width: 300px;
+    height: auto;
+  }
+  
+  .tituloUno {
+   font-size: 120%;
+   color: dimgrey;
+   margin: auto;
+   display: flex;
+   justify-content: center;
+   margin-bottom: 3%;
+  }
+  
+  
+  .imagenesUno {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 80%;
+    justify-content: space-around;
+    
+  }
+  
+   .contenidoUno {
+    margin-top: 3%; 
+    width: 100%;
+    height: 30%;
+    
+    margin-left: 2%;
+   }
+   
+   .cartaUno{
+     width: 25%;
+     height: 300px;
+   }
+  /****NUEVOS PRODUCTOS****/
+  
+  .contenidoDos {
+    width: 100%;
+    height: 30%;
+    margin-top: 10%;
+    
+    margin-left: 2%;
+  }
+  .cartaDos{
+    width: 25%;
+    height: 300px;
+  }
+  .tituloDos{
+   font-size: 120%;
+   color: dimgrey;
+   margin: auto;
+   display: flex;
+   justify-content: center;
+   margin-bottom: 3%;
+  }
+  
+  .imagenesDos {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 80%;
+    justify-content: space-around;
+  }
+  
+  /***COMPARTE TUS FOTOS***/
+  
+  .contenidoTres {
+    width: 100%;
+    margin-top: 10%;
+  }
+  
+  .tituloTres{
+   font-size: 120%;
+   color: dimgrey;
+   margin: auto;
+   display: flex;
+   justify-content: center;
+   margin-bottom: 3%;
+   width: 100%;
+  }
+  
+  .imagenesTres {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: 80%;
+    margin-left: 10%;
+  
+  }
+  
+  
+  .tamImagenTres {
+    width: 100%;
+    height: auto;
+  }
+  
+  /*OFERTA*/
+  .oferta{
+    background: #DBB7A2;
+    margin-top: 5%;
+    height: 230px;
+    
+  }
+  
+  .rectangulo {
+    
+    font-size: 30px; 
+    color:white;
+    text-align: center;
+    margin-top: 1%;
+    font-family: inherit;
+    padding-top: 1%;
+    
+  }
+  
+  .inscribirse{
+    font-size: 15x; 
+    color:white;
+    text-align: center;
+    font-family: inherit;
+    
+    
+  
+  }
+  .tituloI{
+    font-size: 120%;
+    margin-top: 7%;
+    color: dimgrey;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3%;
+    width: 100%;
+  }
+  .interaccion{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 5%;
+  }
+  .imagenG{
+    width: 50%;
+    padding-left: 30%;
+  }
+  .anillog{
+    width: 100%;
+  }
+  .Colores{
+    display: flex;
+    flex-direction: row;
+  }
+  .Color1{
+    width: 80px;
+    height: 80px;
+    background: green;
+    margin: 10px;
+    border-radius: 80px;
+  }
+  .Color2{
+    width: 80px;
+    height: 80px;
+    background: pink;
+    margin: 10px;
+    border-radius: 80px;
+  }
+  .Color3{
+    width: 80px;
+    height: 80px;
+    background: black;
+    margin: 10px;
+    border-radius: 80px;
+  }
+  .Color4{
+    width: 80px;
+    height: 80px;
+    background: blue;
+    margin: 10px;
+    border-radius: 80px;
+  }
+  
+  
+  /*FOOTER*/
+  footer{
+    background:#C6C3C2;
+  }
+  .footerGrupo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 70%;
+    margin: auto;
+    margin-top: 80px;
+  }
+  
+  .footerList{
+    display: flex;
+    flex-direction: column;
+  }
+  .titulo{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+  }
+  .textoInfo{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px;
+    padding: 5px;
+    color: azure;
+  }
+  
+  /*SLIDER*/ 
+  #car {
+    width: 100%;
+    height: auto;
+      }
+      
+  
+  /*# sourceMappingURL=style.css.map */

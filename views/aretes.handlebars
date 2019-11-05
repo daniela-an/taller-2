@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Emilia</title>
+
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/aretes.css">
+</head>
+
+<body>
+    {{> nav}}
+    <section class="aretes">ARETES</section>
+    <section class="filtros">
+        <article>
+            <div class="pCont"><p>COLOR</p></div>
+            <ul>
+                <li><a href="">Todos</a></li>
+                <li><a href="">Dorado</a></li>
+                <li><a href="">Plateado</a></li>
+                <li><a href="">Azul</a></li>
+                <li><a href="">Rojo</a></li>
+                <li><a href="">Negro</a></li>
+            </ul>
+        </article>
+        <article>
+            <div class="pCont"><p>ESTILO</p></div>
+            <ul>
+                <li><a href="">Todos</a></li>
+                <li><a href="">Candongas</a></li>
+                <li><a href="">Aretes Largos</a></li>
+            </ul>
+        </article>
+        <article>
+            <div class="pCont"><p>DESTACADOS</p></div>
+            <ul>
+                <li><a href="">Destacados</a></li>
+                <li><a href="">Todos</a></li>
+                <li><a href="">Alfabeticamente A-z</a></li>
+                <li><a href="">Precio de menor a mayor</a></li>
+                <li><a href="">Fecha, del nuevo al viejo</a></li>
+            </ul>
+        </article>
+    </section>
+
+    <section class="productos">
+        {{#each productos}}
+        <div class="prod">
+            <div data-name={{nombre}} class="imgCont">
+                <img src="./image/galeriaAretes/{{imagenes.[0]}}.jpg" alt="{{nombre}}" style="width: 100%;">
+            </div>
+            <p>Añadir al Carrito</p>
+            <h2>{{nombre}}</h2>
+            <h2>{{color}}</h2>
+            <h2>$ {{precio}}</h2>
+        </div>
+        {{/each}}
+    </section>
+
+    {{> foot}}
+</body>
+
+</html>
