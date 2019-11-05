@@ -1,0 +1,288 @@
+[
+    
+    {
+    "categoria": "arete",
+    "estilo":"Aretes Largos",
+    "descripción": "información del producto",
+    "nombre":"Aretes amor",
+    "precio": 55000,
+    "color": "Rojo",
+    "imagenes": [
+               "aretesAmor_Grande",
+               "aretesAmor_01",
+               "aretesAmor_02"
+      ]
+    },
+
+
+    {
+    "categoria": "arete",
+    "estilo":"Aretes Largos",
+    "descripción": "información del producto",
+    "nombre":"Aretes Amores",
+    "precio": 55000,
+    "color": "Azul",
+    "imagenes": [
+               "aretesAmores_Grande",
+               "aretesAmores_01",
+               "aretesAmors_02"
+      ]
+    },
+    
+
+     {
+     "categoria": "arete",
+     "estilo":"Topos",
+     "descripción": "información del producto",
+     "nombre":"Arete Perla de Oro",
+     "precio": 22000,
+     "color": "Dorado",
+     "imagenes": [
+                     "aretesPerladeOro_Grande",
+                     "aretesPerladeOro_01",
+                     "aretesPerladeOro_02"
+                  ]
+    },
+
+    {
+        "categoria": "arete",
+        "estilo":"Topos",
+        "descripción": "información del producto",
+        "nombre":"Arete Rubi",
+        "precio": 35000,
+        "color": "Rojo",
+        "imagenes": [
+                        "aretesRubi_Grande",
+                        "aretesRubi_01",
+                        "aretesPerladeOro_02"
+                     ]
+       },
+
+       {
+        "categoria": "arete",
+        "estilo":"Candongas",
+        "descripción": "información del producto",
+        "nombre":"Aretes Ondulaciones",
+        "precio": 45000,
+        "color": "Dorado",
+        "imagenes": [
+                        "aretesOndulaciones_Grande",
+                        "aretesOndulaciones_01",
+                        "aretesOndulaciones_02"
+                     ]
+       },
+
+       {
+        "categoria": "arete",
+        "estilo":"Topos",
+        "descripción": "información del producto",
+        "nombre":"Aretes Ilusión",
+        "precio": 28000,
+        "color": "Dorado",
+        "imagenes": [
+                        "aretesIlusión_Grande",
+                        "aretesIlusión_01",
+                        "aretesIlusión_02"
+                     ]
+       },
+
+
+       {
+        "categoria": "arete",
+        "estilo":"Aretes Largos",
+        "descripción": "información del producto",
+        "nombre":"Aretes Tejidos",
+        "precio": 60000,
+        "color": "Negro",
+        "imagenes": [
+                        "aretesTejidos_Grande",
+                        "aretesTejidos_01",
+                        "aretesTejidos_02"
+                     ]
+       },      
+
+       {
+        "categoria": "arete",
+        "estilo":"Aretes Largos",
+        "descripción": "información del producto",
+        "nombre":"Aretes Tejidos Dobles",
+        "precio": 65000,
+        "color": "Dorado",
+        "imagenes": [
+                        "aretesTejidosDobles_Grande",
+                        "aretesTejidosDobles_01",
+                        "aretesTejidosDobles_02"
+                     ]
+       },
+
+       {
+        "categoria": "arete",
+        "estilo":"Aretes Largos",
+        "descripción": "información del producto",
+        "nombre":"Aretes Lluvia",
+        "precio": 55000,
+        "color": "Dorado",
+        "imagenes": [
+                        "aretesLluvia_Grande",
+                        "aretesLluvia_01",
+                        "aretesLluvia_02"
+                     ]
+       },
+
+       {
+        "categoria": "arete",
+        "estilo":"Aretes Largos",
+        "descripción": "información del producto",
+        "nombre":"Aretes Sueños",
+        "precio": 67000,
+        "color": "Negros",
+        "imagenes": [
+                        "aretesSueños_Grande",
+                        "aretesSueños_01",
+                        "aretesSueños_02"
+                     ]
+       }, 
+
+       {
+        "categoria": "arete",
+        "estilo":"Aretes Largos",
+        "descripción": "información del producto",
+        "nombre":"Aretes Sol Naciente",
+        "precio": 58000,
+        "color": "Negros",
+        "imagenes": [
+                        "aretesSolNaciente_Grande",
+                        "aretesSolNaciente_01",
+                        "aretesSolNaciente_02"
+                     ]
+       },
+
+       {
+        "categoria": "arete",
+        "estilo":"Aretes Largos",
+        "descripción": "información del producto",
+        "nombre":"Aretes Circulando",
+        "precio": 60000,
+        "color": "Rojo",
+        "imagenes": [
+                        "aretesSolCirculando_Grande",
+                        "aretesSolCirculando_01",
+                        "aretesSolCirculando_02"
+                     ]
+       },
+
+       {
+        "categoria": "arete",
+        "estilo":"Aretes Largos",
+        "descripción": "información del producto",
+        "nombre":"Aretes Felecos",
+        "precio": 53000,
+        "color": "Rojo",
+        "imagenes": [
+                        "aretesFlecos_Grande",
+                        "aretesFlecos_01",
+                        "aretesFlecos_02"
+                     ]
+       },         
+       
+       {
+        "categoria": "arete",
+        "estilo":"Topos",
+        "descripción": "información del producto",
+        "nombre":"Aretes Media Luna",
+        "precio": 53000,
+        "color": "Dorado",
+        "imagenes": [
+                        "aretesMediaLuna_Grande",
+                        "aretesMediaLuna_01",
+                        "aretesMediaLuna_02"
+                     ]
+       },
+
+       {
+        "categoria": "arete",
+        "estilo":"Aretes Largos",
+        "descripción": "información del producto",
+        "nombre":"Aretes Cascada",
+        "precio": 61000,
+        "color": "Blanco",
+        "imagenes": [
+                        "aretesCascada_Grande",
+                        "aretesCascada_01",
+                        "aretesCascada_02"
+                     ]
+       },
+       
+       {
+        "categoria": "arete",
+        "estilo":"Aretes Largos",
+        "descripción": "información del producto",
+        "nombre":"Aretes Flecos Multi",
+        "precio": 53000,
+        "color": "Blanco",
+        "imagenes": [
+                        "aretesFlecosMulti_Grande",
+                        "aretesFlecosMulti_01",
+                        "aretesFlecosMulti_02"
+                     ]
+       },
+
+       {
+        "categoria": "arete",
+        "estilo":"Candongas",
+        "descripción": "información del producto",
+        "nombre":"Aretes Hexagonales",
+        "precio": 60000,
+        "color": "Dorado",
+        "imagenes": [
+                        "aretesHexagonales_Grande",
+                        "aretesHexagonales_01",
+                        "aretesHexagonales_02"
+                     ]
+       },
+
+       {
+        "categoria": "arete",
+        "estilo":"Aretes Largos",
+        "descripción": "información del producto",
+        "nombre":"Aretes Circulo de Vida",
+        "precio": 70000,
+        "color": "Dorado",
+        "imagenes": [
+                        "aretesCirculoVida_Grande",
+                        "aretesCirculoVida_01",
+                        "aretesCirculoVida_02"
+                     ]
+       },
+       
+       {
+        "categoria": "arete",
+        "estilo":"Aretes Largos",
+        "descripción": "información del producto",
+        "nombre":"Aretes Españoles",
+        "precio": 82000,
+        "color": "Rojo",
+        "imagenes": [
+                        "aretesEspañoles_Grande",
+                        "aretesEspañoles_01",
+                        "aretesEspañoles_02"
+                     ]
+       },
+
+
+       {
+        "categoria": "arete",
+        "estilo":"Candongas",
+        "descripción": "información del producto",
+        "nombre":"Aretes Infinidad",
+        "precio": 75000,
+        "color": "Plateado",
+        "imagenes": [
+                        "aretesInfinidad_Grande",
+                        "aretesInfinidad_01",
+                        "aretesInfinidad_02"
+                     ]
+       } 
+
+
+]
