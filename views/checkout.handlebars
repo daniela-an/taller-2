@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Emilia</title>
+
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/checkout.css">
+</head>
+
+<body>
+    {{> nav}}
+
+    <section class="tucarrito">TU CARRITO</section>
+
+    <div class="titulos">
+        <p id="uno">Producto</p>
+        <p>Color</p>
+        <p>Categoria</p>
+        <p id="dos">Precio</p>
+    </div>
+    <div class="prueba">
+        {{#each productos}}
+        <div class="cuerpo__izq__item">
+            <img src="./image/galeriaAretes/{{imagenes.[0]}}.jpg" alt="" class="cuerpo__izq__item__img" width="15%"
+                height="35%">
+
+            <div class="cuerpo__izq__item__img__name">
+                <h2>{{nombre}}</h2>
+                <h6>{{descripción}}</h6>
+            </div>
+
+            <div data-color="{{color}}" class="color">{{color}}</div>
+            <div data-precio="{{categoria}}" class="categoria">{{categoria}}</div>
+            <h3 data-precio="{{Precio}}" class="precio">${{precio}}</h3>
+            <div class="cerrar">x</div>
+        </div>
+        {{/each}}
+    </div>
+    <div class="btnVaciar">BORRAR CARRITO</div>
+    <article class="advices">
+        <div class="uno">
+            <p>INSTRUCCIONES ESPECIALES PARA NUESTRO EQUIPO DE DESPACHO</p>
+            <input type="text">
+        </div>
+        <div class="dos">
+            <p>TOTAL DEL CARRITO</p>
+            <div class="total">Total: {{total}}</div>
+        </div>
+    </article>
+    <div class="btnPagar">PASAR A PAGAR</div>
+
+</body>
+{{> foot}}
+<script>
+    document.querySelector(".btnVaciar").addEventListener('click', function () {
+
+        fetch(`/api/vaciarCarrito`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: ``,
+        }).then(function(respuesta){
+            return respuesta.text();
+        }).catch(function(error){
+            console.error(error);
+        }).then(function(mensaje){
+            console.log(mensaje);
+        });
+
+        window.location.href = "/checkOut";
+    }
+    );
+
+    document.querySelector(".btnPagar").addEventListener('click', function () {
+        window.location.href = "/informacion";
+    }
+    );
+</script>
+</html>
