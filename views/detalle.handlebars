@@ -20,14 +20,14 @@
         <article class="imagenes">
             <div class="imgsVerticales">
                 <div class="imgCont">
-                    <img src="./image/galeriaAretes/{{imagenes.[0]}}.jpg" alt="{{nombre}}" style="width: 100%;">
+                    <img id="imguno" src="./image/galeriaAretes/{{imagenes.[0]}}.jpg" alt="{{nombre}}" style="width: 100%;">
                 </div>
-                <div class="imgCont">
-                    <img src="./image/galeriaAretes/{{imagenes.[2]}}.jpg" alt="{{nombre}}" style="width: 100%;">
+                <div class="imgCont" >
+                    <img id="imgdos" src="./image/galeriaAretes/{{imagenes.[2]}}.jpg" alt="{{nombre}}" style="width: 100%;">
                 </div>
             </div>
-            <div class="imgCont">
-                <img src="./image/galeriaAretes/{{imagenes.[1]}}.jpg" alt="{{nombre}}" style="width: 100%;">
+            <div class="imgCont" >
+                <img id="imgtres" src="./image/galeriaAretes/{{imagenes.[1]}}.jpg" alt="{{nombre}}" style="width: 100%;">
             </div>
         </article>
         <article class="descripcion">
@@ -67,6 +67,18 @@
         window.location.href = "/checkout";
     }
     );
+
+    var img1 = document.querySelector('#imguno');
+    var img2 = document.querySelector('#imgdos');
+    var img3 = document.querySelector('#imgtres');
+
+    img1.addEventListener('click', ()=> {
+        img3.src = img1.src;
+    });
+
+    img2.addEventListener('click', ()=> {
+        img3.src = img2.src;
+    });
 </script>
 
 </html>

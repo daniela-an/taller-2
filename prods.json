@@ -4,7 +4,7 @@
     "categoria": "arete",
     "estilo":"Aretes Largos",
     "descripción": "información del producto",
-    "nombre":"Aretes amor",
+    "nombre":"Aretes Amor",
     "precio": 55000,
     "color": "Rojo",
     "imagenes": [
@@ -25,7 +25,7 @@
     "imagenes": [
                "aretesAmores_Grande",
                "aretesAmores_01",
-               "aretesAmors_02"
+               "aretesAmores_02"
       ]
     },
     
@@ -54,7 +54,7 @@
         "imagenes": [
                         "aretesRubi_Grande",
                         "aretesRubi_01",
-                        "aretesPerladeOro_02"
+                        "aretesRubi_02"
                      ]
        },
 
