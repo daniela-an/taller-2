@@ -114,4 +114,44 @@
   height: 40px;
   background-color: #CDB6AB;
 }
+
+@media screen and (max-width: 600px) {
+  .producto {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .descripcion {
+    width: 20%;
+    color: gray;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .descripcion h2 {
+    margin-bottom: 5px;
+  }
+  .descripcion h3 {
+    margin-bottom: 40px;
+  }
+  .descripcion .input {
+    margin-top: 250px;
+  }
+  .descripcion .input input {
+    width: 10%;
+    height: 30px;
+  }
+  .descripcion .input button {
+    border: none;
+    padding: 0 10%;
+    color: white;
+    height: 40px;
+    background-color: #CDB6AB;
+  }
+}
 /*# sourceMappingURL=detalle.css.map */

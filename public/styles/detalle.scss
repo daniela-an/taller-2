@@ -14,7 +14,6 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    ;
 
     .imagenes {
         width: 50%;
@@ -77,4 +76,47 @@
             }
         }
     }
+}
+
+@media screen and (max-width: 600px) {
+    .producto {
+        flex-direction: column;
+    }
+
+    .descripcion {
+        width: 20%;
+        color: gray;
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+            margin-bottom: 5px;
+        }
+
+        h3 {
+            margin-bottom: 40px;
+        }
+
+        .input {
+            margin-top: 250px;
+            input {
+                width: 10%;
+                height: 30px;
+            }
+
+            button {
+                border: none;
+                padding: 0 10%;
+                color: white;
+                height: 40px;
+                background-color: #CDB6AB;
+            }
+        }
+    }
+   
+
+  
+
+
+
 }
