@@ -1,10 +1,10 @@
-//Imagenes de joyeria
+//Imagenes de joyeria izquierdo
 var aretes = document.querySelector('.contenido__joyeria__aretes__img');
 var collares = document.querySelector('.contenido__joyeria__collares__img');
 var pulseras = document.querySelector('.contenido__joyeria__pulseras__img');
 var anillos = document.querySelector('.contenido__joyeria__anillos__img');
 
-//Imagenes joyas
+//Imagenes joyas derecho
     var item1 = document.querySelector('.contenido__joyas__items__item-1-img');
     var item2 = document.querySelector('.contenido__joyas__items__item-2-img');
     var item3 = document.querySelector('.contenido__joyas__items__item-3-img');
