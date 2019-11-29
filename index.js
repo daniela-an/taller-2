@@ -1,32 +1,45 @@
-const MongoClient = require('mongodb').MongoClient,
-    express = require('express'),
-    engines = require('consolidate');
-
-var app = express(),
-    db;
-
+const express = require('express');
+const hbs = require('express-handlebars');
 const Handlebars = require('handlebars');
+const path = require('path');
+const app = express();
 
-app.engine('handlebars', engines.handlebars);
-app.set('views', './views');
-app.set('view engine', 'handlebars');
+const bodyParser = require('body-parser');
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
+app.use(express.json());
+
+const MongoClient = require('mongodb').MongoClient;
+const url = 'mongodb+srv://cluster0-yr9ec.mongodb.net/productos';
+const dbName = 'store';
+const client = new MongoClient(url, {
+    useUnifiedTopology: true
+});
+var db = null;
+
+client.connect(function (err) {
+    if (err) {
+        console.error(err);
+        return;
+    }
+    db = client.db(dbName);
+    app.listen(process.env.PORT || 5500  );
+});
 
 app.use(express.static('public'));
+app.engine('handlebars', hbs({
+    extname: '.handlebars',
+    defaultLayout: '',
+    layoutsDir: path.join(__dirname, 'views')
+}));
 
-MongoClient.connect('mongodb+srv://cluster0-yr9ec.mongodb.net/productos',
-    {
-        auth:{
-            user:'alejandra_angel5@hotmail.com' ,
-            password: 'Petreos7'
-        }
-    },
-    function (err, client){
-        if(err) throw err;
+app.set('view engine', 'handlebars');
 
-        db.client.db('store');
-        app.listen(process.env.PORT || 5500 );
-    }
-);
+app.get('/', function (request, response) {
+    response.render('main');
+});
 
 app.get('/store', function (request, response) {
     const coleccion = db.collection('productos');
