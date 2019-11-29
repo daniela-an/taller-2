@@ -12,14 +12,21 @@ app.use(bodyParser.urlencoded({
 app.use(express.json());
 
 const MongoClient = require('mongodb').MongoClient;
-const url = 'mongodb+srv://cluster0-yr9ec.mongodb.net/productos';
+//const url = 'mongodb+srv://cluster0-yr9ec.mongodb.net/productos';
 const dbName = 'store';
-const client = new MongoClient(url, {
+/*const client = new MongoClient(url, {
     useUnifiedTopology: true
-});
+});*/
 var db = null;
 
-client.connect(function (err) {
+MongoClient.connect('mongodb+srv://cluster0-yr9ec.mongodb.net/'+dbName,
+{
+    auth: {
+        user: 'daniela_angel_s',
+        password: 'Petreos7'
+    }
+},
+function (err) {
     if (err) {
         console.error(err);
         return;
