@@ -3,6 +3,8 @@ var item2 = document.querySelectorAll("#item2");
 var item3 = document.querySelectorAll("#item3");
 var item4 = document.querySelectorAll("#item4");
 
+var title = document.querySelector("#titulo");
+
 var item1S = document.querySelector("#item1a");
 var item2S = document.querySelector("#item2a");
 var item3S = document.querySelector("#item3a");
@@ -12,6 +14,8 @@ var item4S = document.querySelector("#item4a");
     TweenMax.from(item2, 1.2, {opacity:0, x:1000});
     TweenMax.from(item3, 1.3, {opacity:0, x:1000});
     TweenMax.from(item4, 1.4, {opacity:0, x:1000});
+
+    TweenMax.from(titulo, 1.4, {opacity:0, y:-200});
 
     TweenMax.from(item1S, 1.2, {opacity:0, x:-350});
     TweenMax.from(item2S, 1.2, {opacity:0, x:-400});
