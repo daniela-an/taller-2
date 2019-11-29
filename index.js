@@ -1,10 +1,11 @@
 const MongoClient = require('mongodb').MongoClient,
-    ObjectID = require('mongodb').ObjectID,
     express = require('express'),
     engines = require('consolidate');
 
 var app = express(),
     db;
+
+const Handlebars = require('handlebars');
 
 app.engine('handlebars', engines.handlebars);
 app.set('views', './views');
@@ -19,7 +20,7 @@ MongoClient.connect('mongodb+srv://cluster0-yr9ec.mongodb.net/productos',
             password: 'Petreos7'
         }
     },
-    function (err, cliete){
+    function (err, client){
         if(err) throw err;
 
         db.client.db('store');

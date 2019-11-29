@@ -13,7 +13,7 @@ app.use(express.json());
 
 const MongoClient = require('mongodb').MongoClient;
 const url = 'mongodb://localhost:27017';
-const dbName = '';
+const dbName = 'store';
 const client = new MongoClient(url, {
     useUnifiedTopology: true
 });
@@ -26,22 +26,6 @@ client.connect(function (err) {
     }
     db = client.db(dbName);
 });
-
-
-MongoClient.connect('mongodb+srv://cluster0-yr9ec.mongodb.net/productos',
-    {
-        auth:{
-            user:'alejandra_angel5@hotmail.com' ,
-            password: 'Petreos7'
-        }
-    },
-    function (err, cliete){
-        if(err) throw err;
-
-        db.client.db('store');
-        app.listen(process.env.PORT || 1234 );
-    }
-)
 
 app.use(express.static('public'));
 app.engine('handlebars', hbs({
