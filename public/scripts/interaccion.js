@@ -1,4 +1,5 @@
 var imagenGrande = document.querySelector('.anillog');
+    
     var primero = document.querySelector('.Color1');
     var segundo = document.querySelector('.Color2');
     var tercero = document.querySelector('.Color3');
