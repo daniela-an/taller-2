@@ -4,6 +4,7 @@ var collares = document.querySelector('.contenido__joyeria__collares__img');
 var pulseras = document.querySelector('.contenido__joyeria__pulseras__img');
 var anillos = document.querySelector('.contenido__joyeria__anillos__img');
 
+
 //Imagenes joyas derecho
     var item1 = document.querySelector('.contenido__joyas__items__item-1-img');
     var item2 = document.querySelector('.contenido__joyas__items__item-2-img');

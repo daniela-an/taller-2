@@ -1,3 +1,5 @@
+
+
 .contenido {
     display: flex;
     flex-direction: row;
@@ -23,6 +25,8 @@
         &__aretes, &__collares, &__pulseras, &__anillos{
             width: 150px;
             height: 150px;
+}
+
 
             img{
                 width: 100%;
