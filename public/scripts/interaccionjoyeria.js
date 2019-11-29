@@ -5,18 +5,18 @@ var pulseras = document.querySelector('.contenido__joyeria__pulseras__img');
 var anillos = document.querySelector('.contenido__joyeria__anillos__img');
 
 //Imagenes joyas
-    var item1 = document.querySelector('.contenido__joyas__items__item-1');
-    var item2 = document.querySelector('.contenido__joyas__items__item-2');
-    var item3 = document.querySelector('.contenido__joyas__items__item-3');
-    var item4 = document.querySelector('.contenido__joyas__items__item-4');
-    var item5 = document.querySelector('.contenido__joyas__items__item-5');
-    var item6 = document.querySelector('.contenido__joyas__items__item-6');
-    var item7 = document.querySelector('.contenido__joyas__items__item-7');
-    var item8 = document.querySelector('.contenido__joyas__items__item-8');
-    var item9 = document.querySelector('.contenido__joyas__items__item-9');
-    var item10 = document.querySelector('.contenido__joyas__items__item-10');
-    var item11 = document.querySelector('.contenido__joyas__items__item-11');
-    var item12 = document.querySelector('.contenido__joyas__items__item-12');
+    var item1 = document.querySelector('.contenido__joyas__items__item-1-img');
+    var item2 = document.querySelector('.contenido__joyas__items__item-2-img');
+    var item3 = document.querySelector('.contenido__joyas__items__item-3-img');
+    var item4 = document.querySelector('.contenido__joyas__items__item-4-img');
+    var item5 = document.querySelector('.contenido__joyas__items__item-5-img');
+    var item6 = document.querySelector('.contenido__joyas__items__item-6-img');
+    var item7 = document.querySelector('.contenido__joyas__items__item-7-img');
+    var item8 = document.querySelector('.contenido__joyas__items__item-8-img');
+    var item9 = document.querySelector('.contenido__joyas__items__item-9-img');
+    var item10 = document.querySelector('.contenido__joyas__items__item-10-img');
+    var item11 = document.querySelector('.contenido__joyas__items__item-11-img');
+    var item12 = document.querySelector('.contenido__joyas__items__item-12-img');
 
     function uno(){
         if(estilo){
@@ -116,7 +116,7 @@ var anillos = document.querySelector('.contenido__joyeria__anillos__img');
     item11.addEventListener('click', once);
     item12.addEventListener('click', doce);
 
-    var estilo = false;
+    var estilo = true;
     var btn = document.querySelector('.contenido__joyas__btn');
 
     btn.addEventListener('click', estilos);
@@ -124,4 +124,40 @@ var anillos = document.querySelector('.contenido__joyeria__anillos__img');
     function estilos (){
         estilo = !estilo;
         console.log(estilo);
+
+        if(estilo){
+            item1.setAttribute("src", './image/fotosKit/a2/anillo1.png');
+            item2.setAttribute("src", './image/fotosKit/a2/anillo2.png');
+            item3.setAttribute("src", './image/fotosKit/a2/anillo3.png');
+
+            item4.setAttribute("src", './image/fotosKit/a2/arete1.png');
+            item5.setAttribute("src", './image/fotosKit/a2/arete2.png');
+            item6.setAttribute("src", './image/fotosKit/a2/arete3.png');
+
+            item7.setAttribute("src", './image/fotosKit/a2/collar1.png');
+            item8.setAttribute("src", './image/fotosKit/a2/collar2.png');
+            item9.setAttribute("src", './image/fotosKit/a2/collar3.png');
+
+            item10.setAttribute("src", './image/fotosKit/a2/pulsera1.png');
+            item11.setAttribute("src", './image/fotosKit/a2/pulsera2.png');
+            item12.setAttribute("src", './image/fotosKit/a2/pulsera3.png');
+
+        }else {
+            item1.setAttribute("src", './image/fotosKit/b2/anillo1.png');
+            item2.setAttribute("src", './image/fotosKit/b2/anillo2.png');
+            item3.setAttribute("src", './image/fotosKit/b2/anillo3.png');
+
+            item4.setAttribute("src", './image/fotosKit/b2/arete1.png');
+            item5.setAttribute("src", './image/fotosKit/b2/arete2.png');
+            item6.setAttribute("src", './image/fotosKit/b2/arete3.png');
+
+            item7.setAttribute("src", './image/fotosKit/b2/collar1.png');
+            item8.setAttribute("src", './image/fotosKit/b2/collar2.png');
+            item9.setAttribute("src", './image/fotosKit/b2/collar3.png');
+
+            item10.setAttribute("src", './image/fotosKit/b2/pulsera1.png');
+            item11.setAttribute("src", './image/fotosKit/b2/pulsera2.png');
+            item12.setAttribute("src", './image/fotosKit/b2/pulsera3.png');
+        }
+
     }
