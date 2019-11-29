@@ -41,6 +41,8 @@ app.get('/', function (request, response) {
     response.render('main');
 });
 
+/* RUTAS DEL SITIO */
+/* store revisa store */
 app.get('/store', function (request, response) {
     const coleccion = db.collection('productos');
     var obj = {},
@@ -65,7 +67,7 @@ app.get('/store', function (request, response) {
         response.render('aretes', contexto);
     });
 });
-
+/* detalle revisa detalle */
 app.get('/detalle', function (request, response) {
     const coleccion = db.collection('productos');
     var prod = request.query.producto;
@@ -165,6 +167,8 @@ app.post('/api/nuevaSolicitud', function (request, response) {
     });
     response.send("Nueva solicitud creada");
 });
+
+/* FIN DE LAS RUTAS */
 
 Handlebars.registerPartial('nav', `<div class="navBar"><div class="logo"><a href="/"><img class="styleImgLogo" src="./image/imagenes/Logo.png" alt="logo Emilia"></a></div><div class="navText"><ul class="listText"><li class="barItems"><a class="navBarItems" href="/store?var=general&val=general">Productos</a><ul><li><a href="/store?var=general&val=general">Aretes</a></li><li><a href="">Pulseras</a></li><li><a href="">Collares</a></li><li><a href="">Tobilleras</a></li></ul></li><li class="barItems"><a class="navBarItems" href="kit">Kit</a></li><li class="barItems"><a class="navBarItems" href="#">Contactános</a></li></ul></div><div class="navImg"><ul class="listImg"><li class="barImg"><img class="styleImgMenu" src="./image/imagenes/search.svg" alt=""></li><li class="barImg"><img class="styleImgMenu" src="./image/imagenes/user.svg" alt=""></li><li class="barImg"><img class="styleImgMenu" src="./image/imagenes/shopping-bag.svg" alt=""></li></ul></div></div>`);
 
